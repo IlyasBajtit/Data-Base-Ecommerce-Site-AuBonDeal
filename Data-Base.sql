@@ -26,3 +26,9 @@ CREATE TABLE orders(
     deliver_at DATE,
     user_uuid SERIAL REFERENCES users (user_uuid)
 );
+
+
+CREATE TABLE belong (
+    product_uuid SERIAL REFERENCES products (product_uuid),
+    order_number SERIAL REFERENCES orders (order_number)
+);
