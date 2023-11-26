@@ -16,3 +16,13 @@ CREATE TABLE products (
     updated_at DATE,
     CONSTRAINT chk_dates CHECK (created_at < updated_at)
 ); 
+
+
+CREATE TABLE orders(
+    order_number SERIAL PRIMARY KEY,
+    order_total_cost_ht DECIMAL (10,2) CHECK (order_total_cost_ht >= 0),
+    order_total_quantity INT CHECK (order_total_quantity >= 0),
+    created_at DATE NOT NULL,
+    deliver_at DATE,
+    user_uuid SERIAL REFERENCES users (user_uuid)
+);
