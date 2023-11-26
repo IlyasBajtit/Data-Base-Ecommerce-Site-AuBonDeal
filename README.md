@@ -18,3 +18,6 @@
 - **Clé primaire (PRIMARY KEY):** `order_number` est une clé primaire unique pour identifier chaque commande de manière unique.
 - **Contrainte de vérification (CHECK):** Les contraintes de vérification sur `order_total_cost_ht` et `order_total_quantity` garantissent que ces valeurs sont supérieures ou égales à zéro.
 - **Contrainte NOT NULL:** Aucune des colonnes ne peut contenir de valeurs NULL.
+
+## Table `belong`:
+- **Clés étrangères (FOREIGN KEY):** Les colonnes `product_uuid` et `order_number` sont des clés étrangères qui référencent respectivement les clés primaires `product_uuid` de la table `products` et `order_number` de la table `orders`.
