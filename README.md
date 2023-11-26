@@ -21,3 +21,6 @@
 
 ## Table `belong`:
 - **Clés étrangères (FOREIGN KEY):** Les colonnes `product_uuid` et `order_number` sont des clés étrangères qui référencent respectivement les clés primaires `product_uuid` de la table `products` et `order_number` de la table `orders`.
+
+
+Ces règles de gestion garantissent la cohérence et l'intégrité des données dans la base de données, en définissant des contraintes sur les clés primaires, les clés étrangères, et en spécifiant des conditions de vérification pour certaines colonnes.
