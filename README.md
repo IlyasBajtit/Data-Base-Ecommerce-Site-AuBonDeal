@@ -7,3 +7,8 @@
 - **Contrainte d'unicité (UNIQUE):** La contrainte d'unicité sur `username` garantit que chaque nom d'utilisateur est unique.
 - **Contrainte NOT NULL:** Aucune des colonnes ne peut contenir de valeurs NULL.
 
+## Table `products`:
+- **Clé primaire (PRIMARY KEY):** `product_uuid` est une clé primaire unique pour identifier chaque produit de manière unique.
+- **Contrainte de vérification (CHECK):** Les contraintes de vérification sur `product_price` et `product_quantity` garantissent que ces valeurs sont supérieures ou égales à zéro.
+- **Contrainte NOT NULL:** Aucune des colonnes ne peut contenir de valeurs NULL.
+- **Contrainte de dates (CHECK):** La contrainte `chk_dates` garantit que la date de création (`created_at`) est antérieure à la date de mise à jour (`updated_at`), si cette dernière est spécifiée.
